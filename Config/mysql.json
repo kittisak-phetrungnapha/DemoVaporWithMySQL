@@ -1,5 +1,5 @@
 {
-    "host": "127.0.0.1",
+    "host": "https://demo-vapor-with-mysql.herokuapp.com",
     "user": "root",
     "password": "",
     "database": "registration"
