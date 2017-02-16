@@ -1,6 +1,6 @@
 {
-    "host": "https://demo-vapor-with-mysql.herokuapp.com",
+    "host": "127.0.0.1",
     "user": "root",
-    "password": "",
+    "password": "Csnu17top99",
     "database": "registration"
 }
