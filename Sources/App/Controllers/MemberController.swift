@@ -29,14 +29,14 @@ final class MemberController: ResourceRepresentable {
         guard let firstName = request.data["firstName"]?.string,
             let lastName = request.data["lastName"]?.string,
             let jobPosition = request.data["jobPosition"]?.string,
-            let saraly = request.data["salary"]?.int else {
+            let salary = request.data["salary"]?.int else {
                 
             //Throw a Abort response, I like using the custom status to make sure the frontends have the correct message and response code
-            throw Abort.custom(status: Status.preconditionFailed, message: "Missing first name, last name, job position, or saraly.")
+            throw Abort.custom(status: Status.preconditionFailed, message: "Missing first name, last name, job position, or salary.")
         }
         
         //Create a member
-        var member = Member(firstName: firstName, lastName: lastName, jobPosition: jobPosition, salary: saraly)
+        var member = Member(firstName: firstName, lastName: lastName, jobPosition: jobPosition, salary: salary)
         
         //Asking the member to save itself, the Member model can do that because it's subclassed from Vapors Model
         try member.save()
